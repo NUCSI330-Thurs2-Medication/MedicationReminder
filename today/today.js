@@ -81,4 +81,20 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
 }
+
+var confirmModal = document.getElementById("confirmModal");
+
+var dismissButton = document.getElementById("dismissButton");
+dismissButton.onclick = function(){
+	confirmModal.style.display = "block";
+}
+
+var confirmDismiss = document.getElementById("confirmDismiss");
+var cancelDismiss = document.getElementById("cancelDismiss");
+confirmDismiss.onclick = function(){
+	confirmModal.style.display = "none";
+}
+cancelDismiss.onclick = function(){
+	confirmModal.style.display = "none";
+}
 init();
