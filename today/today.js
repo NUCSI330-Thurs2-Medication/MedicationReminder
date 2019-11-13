@@ -1,11 +1,11 @@
-var medList="00000";
+var medList="";
 var checked='<img src="https://img.icons8.com/ios/39/000000/checked-checkbox.svg">'
 var unchecked='<img src="https://img.icons8.com/ios/39/000000/unchecked-checkbox.svg">'
 var medName="";
 
-function saveData(k, value) {
+function saveData() {
     // Put the object into storage
-    var testObject = { k: value };
+    var testObject = { 'medList': medList };
     document.getElementById("demo").innerHTML=JSON.parse(medList);
     localStorage.setItem(k, JSON.stringify(testObject));
 
@@ -14,15 +14,18 @@ function saveData(k, value) {
 
 function retrieveData() {
     // Retrieve the object from storage
-    medList = localStorage.getItem('medList');
-
+    document.getElementById("demo").innerHTML='bbbb'
+    document.getElementById("demo").innerHTML=localStorage.getItem('medList');
+    // medList = localStorage.getItem('medList');
     // console.log('retrievedObject: ', JSON.parse(retrievedObject));
 }
 
 function init() {
+
+    // document.getElementById("demo").innerHTML='bbbb'
     retrieveData();
+    if (medList=="") medList="00100";
     document.getElementById("demo").innerHTML=JSON.parse(medList);
-    if (medList=="") medList="00000";
     var i;
     // document.getElementById("demo").innerHTML=medName;
     for (i=0; i<medList.length; i++) {
@@ -45,7 +48,7 @@ function changeCheckBox(x) {
         x.innerHTML = checked;
         medList[id]=1;
     }
-    saveData('medList',medList);
+    saveData();
     document.getElementById("demo").innerHTML=JSON.parse(localStorage.getItem('medList'));
 }
 
