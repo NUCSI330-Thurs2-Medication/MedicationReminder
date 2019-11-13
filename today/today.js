@@ -3,36 +3,26 @@ var checked='<img src="https://img.icons8.com/ios/39/000000/checked-checkbox.svg
 var unchecked='<img src="https://img.icons8.com/ios/39/000000/unchecked-checkbox.svg">'
 var medName="";
 
-// function setCookie(cname, cvalue) {
-//   document.cookie = cname + "=" + cvalue + ";";
-// }
-//
-// function getCookie(cname) {
-//   var name = cname + "=";
-//   var ca = document.cookie.split(';');
-//   for(var i = 0; i < ca.length; i++) {
-//     var c = ca[i];
-//     while (c.charAt(0) == ' ') {
-//       c = c.substring(1);
-//     }
-//     if (c.indexOf(name) == 0) {
-//       return c.substring(name.length, c.length);
-//     }
-//   }
-//   return "";
-// }
+function saveData(k, value) {
+    // Put the object into storage
+    var testObject = { k: value };
+    document.getElementById("demo").innerHTML=JSON.parse(medList);
+    localStorage.setItem(k, JSON.stringify(testObject));
+
+
+}
+
+function retrieveData() {
+    // Retrieve the object from storage
+    medList = localStorage.getItem('medList');
+
+    // console.log('retrievedObject: ', JSON.parse(retrievedObject));
+}
 
 function init() {
-    // document.getElementById("demo").innerHTML= 'bbbb';
-    // medName=getCookie("medName");
-    // document.getElementById("demo").innerHTML= medName;
-    // var list = getCookie("medList");
-    // if (list != "") {
-    //     medList=list;
-    // } else {
-    //     medList="00100";
-    // }
-
+    retrieveData();
+    document.getElementById("demo").innerHTML=JSON.parse(medList);
+    if (medList=="") medList="00000";
     var i;
     // document.getElementById("demo").innerHTML=medName;
     for (i=0; i<medList.length; i++) {
@@ -45,8 +35,7 @@ function init() {
 
 function changeCheckBox(x) {
     var id=parseInt(x.id[3]);
-    // document.getElementById("demo").innerHTML= id;
-
+    document.getElementById("demo").innerHTML= id;
 
     if (x.innerHTML == checked) {
         x.innerHTML = unchecked;
@@ -56,7 +45,8 @@ function changeCheckBox(x) {
         x.innerHTML = checked;
         medList[id]=1;
     }
-
+    saveData('medList',medList);
+    document.getElementById("demo").innerHTML=JSON.parse(localStorage.getItem('medList'));
 }
 
 init();
