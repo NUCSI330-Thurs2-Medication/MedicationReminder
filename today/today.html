@@ -1,0 +1,89 @@
+<html>
+<header>
+   <title>Today</title>
+   <link rel="stylesheet" type="text/css" href="today.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</header>
+<body>
+    <div id="screen">
+        <div class="head-bar">
+              <h1>Today</h1>
+        </div>
+
+        <div class="today-body">
+            <div class="today-time">
+                <p> 08:00 </p>
+            </div>
+            <div class="today-item">
+                <!-- <button onclick="myFunction()"> -->
+                  <div id="med0" onclick='changeCheckBox(this)'><img src="https://img.icons8.com/ios/39/000000/unchecked-checkbox.svg"></div>
+                <!-- </button> -->
+                  <a href="today-item-info.html" onclick='getInfo(this)'>
+                      <p>Headache Formula</p>
+                  </a>
+            </div>
+
+            <div class="today-item">
+                  <div id="med1" onclick='changeCheckBox(this)'><img src="https://img.icons8.com/ios/39/000000/unchecked-checkbox.svg"></div>
+                  <a href="today-item-info.html">
+                      <p>Vatimin A</p>
+                  </a>
+            </div>
+
+            <div class="today-time">
+                <p> 12:00 </p>
+            </div>
+
+            <div class="today-item">
+                  <div id="med2" onclick='changeCheckBox(this)'><img src="https://img.icons8.com/ios/39/000000/unchecked-checkbox.svg"></div>
+                  <a href="today-item-info.html">
+                      <p>Headache Formula</p>
+                  </a>
+            </div>
+
+            <div class="today-item">
+                  <div id="med3" onclick='changeCheckBox(this)'><img src="https://img.icons8.com/ios/39/000000/unchecked-checkbox.svg"></div>
+                  <a href="today-item-info.html">
+                      <p>Calan Tablets</p>
+                  </a>
+            </div>
+
+            <div class="today-item">
+                  <div id="med4" onclick='changeCheckBox(this)'><img src="https://img.icons8.com/ios/39/000000/unchecked-checkbox.svg"></div>
+                  <a href="today-item-info.html">
+                      <p>Vatimin A</p>
+                  </a>
+            </div>
+        </div>
+
+
+
+        <div class="foot-bar">
+            <div class="tab-icon">
+                <!-- <a  href="songs.html"> -->
+                <a href="today.html">
+                  <i  class="material-icons md-44" style="color:MediumSeaGreen">schedule</i>
+                </a>
+                  <i class="material-icons md-44">event_note</i>
+                  <i class="material-icons md-44">people</i>
+                  <i class="material-icons md-44">settings_applications</i>
+                <!-- </a> -->
+            </div>
+
+            <div class="tab-text">
+                <a href="today.html"><p style="color:MediumSeaGreen">Today</p></a>
+                <p>Med</p>
+                <p>Team</p>
+                <p>Setting</p>
+            </div>
+        </div>
+    </div>
+    <!-- <p id="demo">aaaa</p> -->
+
+<script src="today.js"></script>
+</body>
+</html>
+<!--
+* bg iphone img is 363x762px
+* iphone 'screen' is apprx 300x530 -->
