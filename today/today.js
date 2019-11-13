@@ -82,8 +82,8 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-var confirmModal = document.getElementById("confirmModal");
 
+var confirmModal = document.getElementById("confirmModal");
 var dismissButton = document.getElementById("dismissButton");
 dismissButton.onclick = function(){
 	confirmModal.style.display = "block";

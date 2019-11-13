@@ -13,6 +13,15 @@
           <img class="modal-content" id="modal_image">
           <div id="caption"></div>
         </div>
+        <div id="confirmModal" class="modal">
+          <div class="modal-content-text">
+            <div class="modal-text">Are you sure about dismissing?</div>
+            <button id="confirmDismiss" class="item-button-yes">Yes</button>
+            <button id="cancelDismiss"class="item-button-cancel">Cancel</button>
+          </div>
+          <div id="caption"></div>
+        </div>
+
         <div class="head-bar">
             <a  href="today.html">
                 <i class="material-icons">keyboard_arrow_left</i>
@@ -28,6 +37,7 @@
                 <div class="item-info-dose">1.0 dose</div>
                 <div class="item-info-time">12:00 am</div>
             </div>
+
 
             <div class="item-instruction-head">
                 <p>Instruction:</p>
@@ -46,7 +56,7 @@
                 <!-- <a href="today.html" class="item-button-done">Done</a>
                 <a href="#" class="item-button-dismiss">Dismiss</a> -->
                 <a href="today.html"><button class="item-button-done">Done</button></a>
-                <a href="today.html"><button class="item-button-dismiss">Dismiss</a>
+                <button id="dismissButton" class="item-button-dismiss">Dismiss</button>
             </div>
         </div>
 

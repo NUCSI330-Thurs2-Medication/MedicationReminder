@@ -368,6 +368,16 @@ a {
   width: 80%;
 }
 
+.modal-text{
+	  margin: auto;
+	  display: block;
+	  width: 80%;
+	  text-align: center;
+	  font-size: 25px;
+	  color: #ccc;
+	  height: 125px;
+}
+
 /* Caption of Modal Image */
 #caption {
   margin: auto;
