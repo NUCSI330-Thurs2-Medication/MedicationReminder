@@ -5,9 +5,10 @@ var medName="";
 
 function saveData() {
     // Put the object into storage
-    var testObject = { 'medList': medList };
-    document.getElementById("demo").innerHTML=JSON.parse(medList);
-    localStorage.setItem(k, JSON.stringify(testObject));
+    // var testObject = { 'medList': medList };
+    document.getElementById("demo").innerHTML=localStorage.getItem('medList');
+    // document.getElementById("demo").innerHTML=JSON.parse(medList);
+    localStorage.setItem('medList', medList);
 
 
 }
@@ -15,8 +16,9 @@ function saveData() {
 function retrieveData() {
     // Retrieve the object from storage
     document.getElementById("demo").innerHTML='bbbb'
-    document.getElementById("demo").innerHTML=localStorage.getItem('medList');
-    // medList = localStorage.getItem('medList');
+
+    medList = localStorage.getItem('medList');
+    document.getElementById("demo").innerHTML='eeeeeee';
     // console.log('retrievedObject: ', JSON.parse(retrievedObject));
 }
 
@@ -24,8 +26,9 @@ function init() {
 
     // document.getElementById("demo").innerHTML='bbbb'
     retrieveData();
+    document.getElementById("demo").innerHTML=medList;
     if (medList=="") medList="00100";
-    document.getElementById("demo").innerHTML=JSON.parse(medList);
+    // document.getElementById("demo").innerHTML=JSON.parse(medList);
     var i;
     // document.getElementById("demo").innerHTML=medName;
     for (i=0; i<medList.length; i++) {
@@ -49,7 +52,7 @@ function changeCheckBox(x) {
         medList[id]=1;
     }
     saveData();
-    document.getElementById("demo").innerHTML=JSON.parse(localStorage.getItem('medList'));
+    // document.getElementById("demo").innerHTML=localStorage.getItem('medList')?JSON.parse(localStorage.getItem('medList')):"ddd";
 }
 
 init();
