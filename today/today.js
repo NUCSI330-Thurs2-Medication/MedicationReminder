@@ -64,6 +64,23 @@ function updateMedList() {
 }
 
 
+function dissMed() {
+    var id;
+    var name=document.getElementById("infoName").innerHTML;
+    var tm=document.getElementById("infoTime").innerHTML.substring(0,2);
+    // document.getElementById("demo").innerHTML=name+tm;
+    if ((name+tm)=='Headache Formula08') id=0;
+    else if ((name+tm)=='Headache Formula12') id=2;
+    else if ((name+tm)=='Vitamin A08') id=1;
+    else if ((name+tm)=='Vitamin A12') id=4;
+    else if (name=='Calan Tablets') id=3;
+
+    retrieveData();
+    tempStr=medList.substr(0, id) + '0' + medList.substr(id + 1);
+    medList=tempStr;
+    saveData();
+}
+
 /* For modal Pictures */
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -85,4 +102,5 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
 }
+
 init();
