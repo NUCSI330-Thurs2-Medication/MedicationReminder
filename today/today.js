@@ -5,32 +5,20 @@ var medName="";
 
 function saveData() {
     // Put the object into storage
-    // var testObject = { 'medList': medList };
-    document.getElementById("demo").innerHTML=localStorage.getItem('medList');
-    // document.getElementById("demo").innerHTML=JSON.parse(medList);
     localStorage.setItem('medList', medList);
-
-
+    // document.getElementById("demo").innerHTML=localStorage.getItem('medList')?localStorage.getItem('medList'):"123";
 }
 
 function retrieveData() {
     // Retrieve the object from storage
-    document.getElementById("demo").innerHTML='bbbb'
-
-    medList = localStorage.getItem('medList');
-    document.getElementById("demo").innerHTML='eeeeeee';
-    // console.log('retrievedObject: ', JSON.parse(retrievedObject));
+    medList=localStorage.getItem('medList')?localStorage.getItem('medList'):"00000";
 }
 
 function init() {
 
-    // document.getElementById("demo").innerHTML='bbbb'
     retrieveData();
-    document.getElementById("demo").innerHTML=medList;
-    if (medList=="") medList="00100";
-    // document.getElementById("demo").innerHTML=JSON.parse(medList);
+    if (medList=="") medList="00000";
     var i;
-    // document.getElementById("demo").innerHTML=medName;
     for (i=0; i<medList.length; i++) {
         if (medList[i]=='1') {
             var medId="med"+i.toString();
@@ -41,18 +29,38 @@ function init() {
 
 function changeCheckBox(x) {
     var id=parseInt(x.id[3]);
-    document.getElementById("demo").innerHTML= id;
 
+    var tempStr;
     if (x.innerHTML == checked) {
         x.innerHTML = unchecked;
-        medList[id]=0;
-        // document.getElementById("demo").innerHTML=x.src;
+        tempStr=medList.substr(0, id) + '0' + medList.substr(id + 1);
+        medList=tempStr;
     } else {
         x.innerHTML = checked;
-        medList[id]=1;
+        tempStr=medList.substr(0, id) + '1' + medList.substr(id + 1);
+        medList=tempStr;
+        // document.getElementById("demo").innerHTML=medList;
     }
     saveData();
-    // document.getElementById("demo").innerHTML=localStorage.getItem('medList')?JSON.parse(localStorage.getItem('medList')):"ddd";
+    // document.getElementById("demo").innerHTML='medList';
+}
+
+function updateMedList() {
+
+    var id;
+    var name=document.getElementById("infoName").innerHTML;
+    var tm=document.getElementById("infoTime").innerHTML.substring(0,2);
+    // document.getElementById("demo").innerHTML=name+tm;
+    if ((name+tm)=='Headache Formula08') id=0;
+    else if ((name+tm)=='Headache Formula12') id=2;
+    else if ((name+tm)=='Vitamin A08') id=1;
+    else if ((name+tm)=='Vitamin A12') id=4;
+    else if (name=='Calan Tablets') id=3;
+
+    retrieveData();
+    tempStr=medList.substr(0, id) + '1' + medList.substr(id + 1);
+    medList=tempStr;
+    saveData();
 }
 
 init();
