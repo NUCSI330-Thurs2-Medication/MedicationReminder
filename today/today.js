@@ -65,21 +65,21 @@ function updateMedList() {
 }
 
 
-function dissMed() {
-    var id;
-    var name=document.getElementById("infoName").innerHTML;
-    var tm=document.getElementById("infoTime").innerHTML.substring(0,2);
-    // document.getElementById("demo").innerHTML=name+tm;
-    if ((name+tm)=='Headache Formula08') id=0;
-    else if ((name+tm)=='Headache Formula12') id=2;
-    else if ((name+tm)=='Vitamin A08') id=1;
-    else if ((name+tm)=='Vitamin A12') id=4;
-    else if (name=='Calan Tablets') id=3;
+function dissMed() {	
+	    var id;
+	    var name=document.getElementById("infoName").innerHTML;
+	    var tm=document.getElementById("infoTime").innerHTML.substring(0,2);
+	    // document.getElementById("demo").innerHTML=name+tm;
+	    if ((name+tm)=='Headache Formula08') id=0;
+	    else if ((name+tm)=='Headache Formula12') id=2;
+	    else if ((name+tm)=='Vitamin A08') id=1;
+	    else if ((name+tm)=='Vitamin A12') id=4;
+	    else if (name=='Calan Tablets') id=3;
 
-    retrieveData();
-    tempStr=medList.substr(0, id) + '0' + medList.substr(id + 1);
-    medList=tempStr;
-    saveData();
+	    retrieveData();
+	    tempStr=medList.substr(0, id) + '0' + medList.substr(id + 1);
+	    medList=tempStr;
+	    saveData();	
 }
 
 /* For modal Pictures */
@@ -104,8 +104,25 @@ if (img) {
       modal.style.display = "none";
     }
 }
-
-
+var confirmDismissModal = document.getElementById("confirmDismissModal");
+var dismissButton = document.getElementById("dismissButton");
+var confirmDismissButton = document.getElementById("confirmDismissButton");
+var cancelDismissButton = document.getElementById("cancelDismissButton");
+if(dismissButton&&confirmDismissModal){
+	dismissButton.onclick = function(){
+		confirmDismissModal.style.display = "block";
+	}
+}
+if(confirmDismissButton&&cancelDismissButton&&confirmDismissModal){
+	confirmDismissButton.onclick = function(){
+		dissMed();
+		confirmDismissModal.style.display = "none";
+		window.location.href = "today.html";
+	}
+	cancelDismissButton.onclick = function(){
+		confirmDismissModal.style.display = "none";
+	}
+}
 
 
 init();
