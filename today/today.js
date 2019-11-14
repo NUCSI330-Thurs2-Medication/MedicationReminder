@@ -124,5 +124,18 @@ if(confirmDismissButton&&cancelDismissButton&&confirmDismissModal){
 	}
 }
 
+var playAudioButton = document.getElementById("playAudioButton");
+var audioAnimationModal = document.getElementById("audioAnimationModal");
+if(playAudioButton&&audioAnimationModal){
+    playAudioButton.onclick = function(){
+        audioAnimationModal.style.display = "block";
+        setTimeout(function(){ audioAnimationModal.style.display = "none";},5000);
+    }
+
+    audioAnimationModal.onclick = function(){
+        audioAnimationModal.style.display = "none";
+    }
+}
+
 
 init();
