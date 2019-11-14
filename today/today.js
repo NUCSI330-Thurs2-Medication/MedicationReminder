@@ -1,3 +1,5 @@
+// import swal from "https://unpkg.com/sweetalert/dist/sweetalert.min.js";
+import swal from 'sweetalert';
 var medList="";
 var checked='<img src="https://img.icons8.com/ios/39/000000/checked-checkbox.svg">'
 var unchecked='<img src="https://img.icons8.com/ios/39/000000/unchecked-checkbox.svg">'
@@ -65,7 +67,7 @@ function updateMedList() {
 }
 
 
-function dissMed() {	
+function dissMed() {
 	    var id;
 	    var name=document.getElementById("infoName").innerHTML;
 	    var tm=document.getElementById("infoTime").innerHTML.substring(0,2);
@@ -79,7 +81,7 @@ function dissMed() {
 	    retrieveData();
 	    tempStr=medList.substr(0, id) + '0' + medList.substr(id + 1);
 	    medList=tempStr;
-	    saveData();	
+	    saveData();
 }
 
 /* For modal Pictures */
@@ -109,9 +111,10 @@ var dismissButton = document.getElementById("dismissButton");
 var confirmDismissButton = document.getElementById("confirmDismissButton");
 var cancelDismissButton = document.getElementById("cancelDismissButton");
 if(dismissButton&&confirmDismissModal){
-	dismissButton.onclick = function(){
-		confirmDismissModal.style.display = "block";
-	}
+    swal("Hello world!");
+	// dismissButton.onclick = function(){
+	// 	confirmDismissModal.style.display = "block";
+	// }
 }
 if(confirmDismissButton&&cancelDismissButton&&confirmDismissModal){
 	confirmDismissButton.onclick = function(){
