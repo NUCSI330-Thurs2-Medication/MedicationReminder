@@ -74,27 +74,33 @@ img.onclick = function(){
   //captionText.innerHTML = this.alt;
 }
 
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
+if(span){
+	span.onclick = function() { 
+	  modal.style.display = "none";
+	}
 }
 
-
-var confirmModal = document.getElementById("confirmModal");
+var confirmDismissModal = document.getElementById("confirmModal");
 var dismissButton = document.getElementById("dismissButton");
-dismissButton.onclick = function(){
-	confirmModal.style.display = "block";
+if(dismissButton&&confirmDismissModal){
+	dismissButton.onclick = function(){
+		confirmDismissModal.style.display = "block";
+	}
 }
 
-var confirmDismiss = document.getElementById("confirmDismiss");
-var cancelDismiss = document.getElementById("cancelDismiss");
-confirmDismiss.onclick = function(){
-	confirmModal.style.display = "none";
-}
-cancelDismiss.onclick = function(){
-	confirmModal.style.display = "none";
+var confirmDismissButton = document.getElementById("confirmDismiss");
+var cancelDismissButton = document.getElementById("cancelDismiss");
+if(confirmDismissButton&&cancelDismissButton&&confirmDismissModal){
+	confirmDismissButton.onclick = function(){
+		confirmDismissModal.style.display = "none";
+	}
+	cancelDismissButton.onclick = function(){
+		confirmDismissModal.style.display = "none";
+	}
 }
 init();
