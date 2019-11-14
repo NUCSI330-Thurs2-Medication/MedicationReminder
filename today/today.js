@@ -1,5 +1,3 @@
-// import swal from "https://unpkg.com/sweetalert/dist/sweetalert.min.js";
-import swal from 'sweetalert';
 var medList="";
 var checked='<img src="https://img.icons8.com/ios/39/000000/checked-checkbox.svg">'
 var unchecked='<img src="https://img.icons8.com/ios/39/000000/unchecked-checkbox.svg">'
@@ -111,10 +109,9 @@ var dismissButton = document.getElementById("dismissButton");
 var confirmDismissButton = document.getElementById("confirmDismissButton");
 var cancelDismissButton = document.getElementById("cancelDismissButton");
 if(dismissButton&&confirmDismissModal){
-    swal("Hello world!");
-	// dismissButton.onclick = function(){
-	// 	confirmDismissModal.style.display = "block";
-	// }
+	dismissButton.onclick = function(){
+		confirmDismissModal.style.display = "block";
+	}
 }
 if(confirmDismissButton&&cancelDismissButton&&confirmDismissModal){
 	confirmDismissButton.onclick = function(){
