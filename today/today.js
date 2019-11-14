@@ -1,6 +1,6 @@
 var medList="";
-var checked='<img src="https://img.icons8.com/ios/39/000000/checked-checkbox.svg">'
-var unchecked='<img src="https://img.icons8.com/ios/39/000000/unchecked-checkbox.svg">'
+var checked='<img src="../images/check.png">'
+var unchecked='<img src="../images/uncheck.png">'
 var medName="";
 
 function saveData() {
