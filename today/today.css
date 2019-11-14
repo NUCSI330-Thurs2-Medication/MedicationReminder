@@ -385,7 +385,7 @@ a {
   margin: auto;
   display: block;
   width: 80%;
-  
+
   text-align: center;
   color: #ccc;
   padding: 10px 0;
@@ -393,7 +393,7 @@ a {
 }
 
 /* Add Animation */
-.modal-content, #caption, .modal-content-text ,.audio-div{  
+.modal-content, #caption, .modal-content-text ,.audio-div{
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.3s;
   animation-name: zoom;
@@ -401,12 +401,12 @@ a {
 }
 
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
+  from {-webkit-transform:scale(0)}
   to {-webkit-transform:scale(1)}
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
+  from {transform:scale(0)}
   to {transform:scale(1)}
 }
 
@@ -450,7 +450,8 @@ a {
   bottom: 0px;
   width: 9px;
   height: 5px;
-  background: #9b59b6;
+  background: MediumSeaGreen;
+  /* #9b59b6 */
   position: absolute;
   animation: audio-wave 1.5s infinite ease-in-out;
 }
@@ -476,10 +477,10 @@ animation-delay: 0.8s;
 }
 
 @keyframes audio-wave {
-    0% {height:5px;transform:translateY(0px);background:#9b59b6;}
-    25% {height:40px;transform:translateY(20px);background:#3498db;}
+    0% {height:5px;transform:translateY(0px);background:MediumSeaGreen;}
+    25% {height:40px;transform:translateY(20px);background:MediumSeaGreen;}
 /*effect is to animate the height of each span from 5px to 30px*/
 /*translateY makes Y axis move down to give the effect that it is growing from the center*/
 
-    50% {height:5px;transform:translateY(0px);background:#9b59b6;}
-    100% {height:5px;transform:translateY(0px);background:#9b59b6;}
+    50% {height:5px;transform:translateY(0px);background:MediumSeaGreen;}
+    100% {height:5px;transform:translateY(0px);background:MediumSeaGreen;}
