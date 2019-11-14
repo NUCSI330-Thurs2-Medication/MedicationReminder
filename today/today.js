@@ -22,7 +22,8 @@ function init() {
     for (i=0; i<medList.length; i++) {
         if (medList[i]=='1') {
             var medId="med"+i.toString();
-            document.getElementById(medId).innerHTML=checked;
+            if (document.getElementById(medId))
+                document.getElementById(medId).innerHTML=checked;
         }
     }
 };
@@ -89,18 +90,22 @@ var modal = document.getElementById("myModal");
 var img = document.getElementById("thumbnail");
 var modalImg = document.getElementById("modal_image");
 var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  //captionText.innerHTML = this.alt;
+if (img) {
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      //captionText.innerHTML = this.alt;
+    }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
 }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
+
 
 init();
