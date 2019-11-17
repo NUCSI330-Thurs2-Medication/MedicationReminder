@@ -477,6 +477,138 @@ left: 44px;
 animation-delay: 0.8s;
 }
 
+.team-message {
+	border: 0.5px solid #f57f76f;
+
+	height: 23px;
+	width: 83%;
+	margin-left: auto;
+	margin-right: auto;
+	/* color: #838786; */
+	color: white;
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-left: 10px;
+	/* background-color: #f7faf9; */
+	background-color: #f57f76;
+	border-radius: 6px;
+	box-shadow: 2px 2px 5px #888888;
+		/* font-weight: bold; */
+}
+
+.team-item {
+	border: 0.5px solid #d2d2d2;
+
+	height: 80px;
+	width: 93%;
+	margin-left: auto;
+	margin-right: auto;
+	/* color: #838786; */
+	color: black;
+	margin-top: 10px;
+	/* padding-top: -10px; */
+	background-color: #f7faf9;
+	border-radius: 6px;
+
+	box-shadow: 2px 2px 5px #888888;
+}
+
+.team-item img {
+	/* border: 0.5px solid #C1C0C0; */
+	float: left;
+	margin-top: 7px;
+	margin-left: 10px;
+	margin-right: 14px;
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+}
+
+.team-item p {
+	/* border: 0.5px solid black; */
+	margin-top: 3px;
+	margin-right: 50px;
+	/* font: 24px bold, sans-serif; */
+
+}
+
+.team-item-member {
+	/* border: 0.5px solid black; */
+	margin-right: 50px;
+	margin-top: 17px;
+	font: 24px bold, sans-serif;
+}
+
+.request-body {
+	height: 410px;
+	width: inherit;
+	/* margin-top: -20px; */
+	border: 0.5px solid #d2d2d2;
+}
+
+.request-info {
+	/* border: 0.5px solid black; */
+	height: 160px;
+	width: inherit;
+}
+
+.request-info img {
+	/* border: 0.5px solid black; */
+	float: left;
+	margin-top: 7px;
+	margin-left: 10px;
+	height: 130px;
+	width: 130px;
+	margin-right: 13px;
+	/* border-radius: 50%; */
+}
+
+.request-info-name {
+	/* border: 0.5px solid black; */
+	margin-top: 18px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.request-info-message-head {
+	/* border: 0.5px solid black; */
+	margin-top: 25px;
+	/* margin-bottom: 50px; */
+	font-size: 18px;
+	font-weight: bold;
+
+	text-decoration: underline;
+}
+
+.request-info-message-text {
+	/* border: 0.5px solid black; */
+	/* margin-top: 10px; */
+	/* margin-bottom: 50px; */
+	font-size: 18px;
+	font-style: italic;
+}
+
+.request-check {
+	height: 40px;
+	width: inherit;
+	/* text-align: center; */
+}
+
+.request-check img {
+	/* border: 0.5px solid black; */
+	float: left;
+	margin-top: 7px;
+	margin-left: 10px;
+	height: 30px;
+	width: 30px;
+	margin-right: 13px;
+	/* border-radius: 50%; */
+}
+
+.request-check p {
+	font-size: 20px;
+}
+
 @keyframes audio-wave {
     0% {height:5px;transform:translateY(0px);background:MediumSeaGreen;}
     25% {height:40px;transform:translateY(20px);background:MediumSeaGreen;}
