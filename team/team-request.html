@@ -14,7 +14,7 @@
           <div id="caption"></div>
         </div>
 
-        <div id="confirmDismissModal" class="modal">
+        <div id="confirmModal" class="modal">
           <div class="modal-content-text">
             <div class="modal-text">Are you sure about dismissing?</div>
             <button id="confirmDismissButton" class="modal-button-yes">Yes</button>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="head-bar">
-            <a  href="today.html">
+            <a  href="team.html">
                 <i class="material-icons">keyboard_arrow_left</i>
             </a>
             <h1>Request</h1>
@@ -51,17 +51,21 @@
             </div>
 
             <div class="request-check">
-                <img src="../images/uncheck.png" alt="check">
+                <img onclick="changeCheckBox(this)" src="../images/uncheck.png" alt="checkbox">
                 <p>I want to share my medication infomation.</p>
             </div>
+                
+            
 
             <div class="item-buttons">
                 <!-- <a href="today.html" class="item-button-done">Done</a>
                 <a href="#" class="item-button-dismiss">Dismiss</a> -->
-                <a href=""><button class="item-button-done"  onclick='updateMedList(this)'>Confirm</button></a>
-                <button id="dismissButton" class="item-button-dismiss">Refuse</button>
+                <a href=""><button class="item-button-done"  onclick='comfirmFriend(this)'>Confirm</button></a>
+                <button id="dismissButton" class="item-button-dismiss" onclick='refuseFriend(this)'>Refuse</button>
             </div>
         </div>
+
+        
 
 
 
@@ -92,7 +96,7 @@
         </div>
     </div>
 <!-- <p id="demo">aaaa</p> -->
-<script src="today.js"></script>
+<script src="team.js"></script>
 </body>
 </html>
 <!--
