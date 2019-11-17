@@ -57,6 +57,36 @@ a {
 	font-size: 30px;
 }
 
+.team-head-bar {
+	/* border: 0.5px solid black; */
+	/* text-shadow: 1px 1px #000000; */
+	text-align: center;
+	padding-left: 35px;
+	color: #f7faf9;
+	height: 60px;
+	/* padding-bottom: auto;
+	padding-top: auto; */
+    background-color: MediumSeaGreen;
+
+}
+
+.team-head-bar i {
+	/* border: 0.5px solid black; */
+	padding-top: 12px;
+	padding-right: 10px;
+	font-size: 40px;
+	width: 30px;
+	float: right;
+	/* color: inherit;
+	text-decoration: none; /* no underline */ */
+}
+
+.team-head-bar h1 {
+	/* border: 0.5px solid black; */
+	padding-top: 12px;
+	font-size: 30px;
+}
+
 .today-body {
 	height: 410px;
 	width: inherit;
@@ -526,7 +556,7 @@ animation-delay: 0.8s;
 
 .team-item p {
 	/* border: 0.5px solid black; */
-	margin-top: 3px;
+	margin-top: 0px;
 	margin-right: 50px;
 	/* font: 24px bold, sans-serif; */
 
@@ -535,7 +565,7 @@ animation-delay: 0.8s;
 .team-item-member {
 	/* border: 0.5px solid black; */
 	margin-right: 50px;
-	margin-top: 17px;
+	margin-top: 10px;
 	font: 24px bold, sans-serif;
 }
 
@@ -560,7 +590,7 @@ animation-delay: 0.8s;
 	height: 130px;
 	width: 130px;
 	margin-right: 13px;
-	/* border-radius: 50%; */
+	border-radius: 50%;
 }
 
 .request-info-name {
@@ -608,6 +638,54 @@ animation-delay: 0.8s;
 .request-check p {
 	font-size: 20px;
 }
+
+.add-body {
+	height: 410px;
+	width: inherit;
+	/* margin-top: -20px; */
+	border: 0.5px solid #d2d2d2;
+}
+
+.add-body-info {
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+input[type=text], select, option {
+  width: 90%;
+  padding: 12px 20px;
+  font-size: 20px;
+  /* margin: 8px 0; */
+  /* margin-left: auto; */
+  margin-right: 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.add-check {
+	height: 40px;
+	width: inherit;
+	/* text-align: center; */
+}
+
+.add-check img {
+	/* border: 0.5px solid black; */
+	float: left;
+	margin-top: 7px;
+	margin-left: 20px;
+	height: 30px;
+	width: 30px;
+	margin-right: 13px;
+	/* border-radius: 50%; */
+}
+
+.add-check p {
+	font-size: 20px;
+}
+
 
 @keyframes audio-wave {
     0% {height:5px;transform:translateY(0px);background:MediumSeaGreen;}
