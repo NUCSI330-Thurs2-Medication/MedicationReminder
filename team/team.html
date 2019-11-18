@@ -1,6 +1,6 @@
 <html>
 <header>
-   <title>Today</title>
+   <title>Team</title>
    <link rel="stylesheet" type="text/css" href="../today/today.css"/>
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -18,7 +18,7 @@
 
         <div class="today-body">
             <a href="team-request.html">
-                <div class="team-message">
+                <div class="team-message" id="teamRequest">
                       You have a request. Click to read.
                 </div>
             </a>
@@ -38,19 +38,15 @@
                     <p>Daughter</p>
                 </div>
             </a>
-        </div>
 
-
-        <!-- <a href="#">
-            <div class="today-body">
-                <div class="team-item">
-                      <div><img src="../images/profile3.png"></div>
-                      <div class="team-item-member">Elizabeth</div>
-                      <p>Daughter</p>
+            <a href="team-member-amy.html">
+                <div class="team-item" style="display: none;" id="Amy">
+                    <div><img src="../images/profile4.jpg"></div>
+                    <div class="team-item-member">Amy</div>
+                    <p>Friend</p>
                 </div>
-            </div>
-        </a> -->
-
+            </a>
+        </div>
 
         <div class="foot-bar">
             <div class="tab-icon">
@@ -61,7 +57,7 @@
                 <a href="../medication/medication.html">
                   <i  class="material-icons md-44">event_note</i>
                 </a>
-                <a href="../team/team.html" >
+                <a href="../team/team.html" onclick="clearShortage()">
                   <i  class="material-icons md-44" style="color:MediumSeaGreen">people</i>
                 </a>
                 <a href="../setting/setting.html">
