@@ -119,6 +119,11 @@ a {
 	/* vertical-align: middle; */
 }
 
+.today-item a {
+	color: inherit;
+	text-decoration: underline;
+}
+
 .today-item img {
 	/* border: 0.5px solid #C1C0C0; */
 	float: left;
