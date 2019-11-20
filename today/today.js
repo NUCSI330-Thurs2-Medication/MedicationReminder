@@ -41,7 +41,7 @@ function changeCheckBox(x) {
         x.innerHTML = unchecked;
         tempStr=medList.substr(0, id) + '0' + medList.substr(id + 1);
         medList=tempStr;
-    } else {
+    } else if (x.innerHTML == unchecked){
         x.innerHTML = checked;
         tempStr=medList.substr(0, id) + '1' + medList.substr(id + 1);
         medList=tempStr;
