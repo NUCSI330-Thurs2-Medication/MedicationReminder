@@ -3,7 +3,7 @@
 
 function init(){
   retrieveData();
-  document.getElementById("demo").innerHTML = checkRequest;
+  // document.getElementById("demo").innerHTML = checkRequest;
   if (friendAmy == "") friendAmy = '0';
   if (checkStatus == "") checkStatus = '0';
   if (checkRequest == "") checkRequest = '0';
@@ -70,15 +70,13 @@ function saveData() {
 
 function saveStatus(){
   localStorage.setItem('checkStatus', checkStatus);
-  document.getElementById("demo").innerHTML = checkStatus;
 }
-
 function retrieveData() {
   // Retrieve the object from storage
   friendAmy = localStorage.getItem('friendAmy')?localStorage.getItem('friendAmy'):'0';
   checkStatus = localStorage.getItem('checkStatus')?localStorage.getItem('checkStatus'):'0';
   checkRequest = localStorage.getItem('checkRequest')?localStorage.getItem('checkRequest'):'0';
-  document.getElementById("demo").innerHTML = checkStatus;
+  // document.getElementById("demo").innerHTML = checkStatus;
 }
 
 function clearShortage(){
@@ -102,7 +100,7 @@ function refuseFriend(){
 // team-request.html
 
 init();
-document.getElementById("demo").innerHTML = checkStatus;
+// document.getElementById("demo").innerHTML = checkStatus;
 
 if (document.getElementById("Amy") && document.getElementById("teamRequest")) {
   if (checkRequest == '1' && friendAmy == '1'){
