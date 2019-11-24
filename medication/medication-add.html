@@ -33,11 +33,11 @@
                     <div id="remind">
                     <div>
                     <p>Time</p>
-                    <input type="time" id="appt" name="appt">
+                    <input type="time" id="time" name="time">
                     </div>
                     <div id="remindopt">
                     <p>Dose</p>
-                    <input>
+                    <input id="dose">
                     </div>
                     </div>
                 <hr/>
@@ -52,27 +52,27 @@
                     <input type="date" id="end" name="end">
                     </div>
                     </div>
-                    <input type="checkbox" name="vehicle1" value="Bike"> Mon.
-                    <input type="checkbox" name="vehicle1" value="Bike"> Tues.
-                    <input type="checkbox" name="vehicle1" value="Bike"> Wed.<br>
-                    <input type="checkbox" name="vehicle1" value="Bike"> Thurs.
-                    <input type="checkbox" name="vehicle1" value="Bike"> Fri.
-                    <input type="checkbox" name="vehicle1" value="Bike"> Sat.<br>
-                    <input type="checkbox" name="vehicle1" value="Bike"> Sun.
+                    <input type="checkbox" id="Mon" name="Mon" value="Mon"> Mon.
+                    <input type="checkbox" id="Tues" name="Tues" value="Tues"> Tues.
+                    <input type="checkbox" id="Wed" name="Wed" value="Wed"> Wed.<br>
+                    <input type="checkbox" id="Thurs" name="Thurs" value="Thurs"> Thurs.
+                    <input type="checkbox" id="Fri" name="Fri" value="Fri"> Fri.
+                    <input type="checkbox" id="Sat" name="Sat" value="Sat"> Sat.<br>
+                    <input type="checkbox" id="Sun" name="Sun" value="Sun"> Sun.
                 <hr/>
                 <h4>Image</h4>
-                    <input type="file" name="myFile">
+                    <input type="file" id="file" name="myFile">
                 <hr/>
                 <h4>Instruction</h4>
-                    <input type="text" name="userId" placeholder="Add a Instruction..."><br>
-                    <button>Hold to Record</button>
+                    <input type="text" name="userId" id="instext" placeholder="Add a Instruction..."><br>
+                    <button id="record">Hold to Record</button>
             </div>
 
             <div class="item-buttons">
                 <!-- <a href="today.html" class="item-button-done">Done</a>
                 <a href="#" class="item-button-dismiss">Dismiss</a> -->
-                <a href="medication.html"><button class="item-button-done">Add</button></a>
-                <a href="medication.html"><button id="dismissButton" class="item-button-dismiss">Cancel</button></a>
+                <a href="medication.html"><button class="item-button-done" id="add">Add</button></a>
+                <a href="medication.html"><button id="cancel" class="item-button-dismiss">Cancel</button></a>
             </div>
         </div>
 
@@ -105,7 +105,7 @@
         </div>
     </div>
 <!-- <p id="demo">aaaa</p> -->
-<script src="team.js"></script>
+<script src="medication.js"></script>
 </body>
 </html>
 <!--

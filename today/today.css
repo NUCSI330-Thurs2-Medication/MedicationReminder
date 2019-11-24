@@ -748,6 +748,16 @@ animation-delay: 0.8s;
 	margin-left: 12px;
 }
 
+#mediday {
+	display: flex;
+	font-size: large;
+}
+
+#meditime {
+	display: flex;
+	font-size: large;
+}
+
 input[type=text], select, option {
   width: 90%;
   padding: 12px 20px;
