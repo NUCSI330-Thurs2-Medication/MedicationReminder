@@ -696,6 +696,7 @@ animation-delay: 0.8s;
 .add-body-info2 input{
 	margin-top: -20px;
 	margin-bottom: 30px;
+	height: 30px;
 }
 
 .add-body-info2 p {
@@ -709,6 +710,19 @@ animation-delay: 0.8s;
 
 .add-body-info2 input[type=text] {
 	width: 98%;
+	height: 20%;
+}
+
+.add-body-info2 input[type=file] {
+	margin-top: -10px;
+	margin-bottom: 10px;
+	zoom: 1.5;
+}
+
+
+.add-body-info2 input[type=checkbox]{
+	zoom: 2;
+	height: 13px;
 }
 
 .add-body-info2 button {
