@@ -1,7 +1,7 @@
 <html>
 <header>
    <title>Today Item Info Calan-Tablets</title>
-   <link rel="stylesheet" type="text/css" href="today.css"/>
+   <link rel="stylesheet" type="text/css" href="../today/today.css"/>
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 </header>
@@ -11,15 +11,6 @@
         <div id="myModal" class="modal">
           <span class="close">&times;</span>
           <img class="modal-content" id="modal_image">
-          <div id="caption"></div>
-        </div>
-
-        <div id="confirmDismissModal" class="modal">
-          <div class="modal-content-text">
-            <div class="modal-text">Are you sure about dismissing?</div>
-            <button id="confirmDismissButton" class="modal-button-yes">Yes</button>
-            <button id="cancelDismissButton"class="modal-button-cancel">Cancel</button>
-          </div>
           <div id="caption"></div>
         </div>
 
@@ -35,7 +26,7 @@
         </div>
 
         <div class="head-bar">
-            <a  href="today.html">
+            <a  href="medication.html">
                 <i class="material-icons">keyboard_arrow_left</i>
             </a>
             <h1>Medication Info</h1>
@@ -43,7 +34,7 @@
 
         <div class="today-body">
             <div class="item-info">
-                <img id="thumbnail" src="../images/calan.png" alt="calan tablets">
+                <img id="thumbnail" src="../images/calan.png" alt="headache">
 
                 <div id="infoName" class="item-info-name">Calan Tablets</div>
                 <div class="item-info-dose">1.0 dose</div>
@@ -63,12 +54,6 @@
                 <p>Take with water.</p>
             </div>
 
-            <div class="item-buttons">
-                <!-- <a href="today.html" class="item-button-done">Done</a>
-                <a href="#" class="item-button-dismiss">Dismiss</a> -->
-                <a href="today.html"><button class="item-button-done"  onclick='updateMedList(this)'>Done</button></a>
-                <button id="dismissButton" class="item-button-dismiss">Dismiss</button>
-            </div>
         </div>
 
 

@@ -48,13 +48,30 @@ a {
 	width: 30px;
 	float: left;
 	/* color: inherit;
-	text-decoration: none; /* no underline */ */
+	text-decoration: none; /* no underline */
 }
 
 .head-bar h1 {
 	/* border: 0.5px solid black; */
 	padding-top: 12px;
 	font-size: 30px;
+}
+
+.medication-head-bar {
+	text-align: center;
+	padding-left: 35px;
+	line-height: 65px;
+	color: #f7faf9;
+	height: 60px;
+    background-color: MediumSeaGreen;
+}
+
+.medication-head-bar i {
+	padding-top: 12px;
+	padding-right: 10px;
+	font-size: 40px;
+	width: 30px;
+	float: right;
 }
 
 .team-head-bar {
@@ -78,7 +95,7 @@ a {
 	width: 30px;
 	float: right;
 	/* color: inherit;
-	text-decoration: none; /* no underline */ */
+	text-decoration: none; /* no underline */ 
 }
 
 .team-head-bar h1 {
@@ -559,6 +576,10 @@ animation-delay: 0.8s;
 	border-radius: 50%;
 }
 
+.team-item h3 {
+	margin-top: 30px;
+}
+
 .team-item p {
 	/* border: 0.5px solid black; */
 	margin-top: 0px;
@@ -655,6 +676,62 @@ animation-delay: 0.8s;
 	margin-left: 20px;
 	margin-top: 20px;
 	font-size: 20px;
+}
+
+.add-body-info2 {
+	height: 355px;
+	margin-left: 5px;
+	margin-bottom: -30px;
+	font-size: 20px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.add-body-info2 select{
+	margin-top: -20px;
+	margin-bottom: 30px;
+	width: 98%;
+}
+
+.add-body-info2 input{
+	margin-top: -20px;
+	margin-bottom: 30px;
+}
+
+.add-body-info2 p {
+	margin-top: -30px;
+}
+
+.add-body-info2 hr {
+	margin-top: -20px;
+	margin-bottom: -20px;
+}
+
+.add-body-info2 input[type=text] {
+	width: 98%;
+}
+
+.add-body-info2 button {
+	width: 98%;
+	height: 10%;
+	margin-top: -20px;
+	background-color: white;
+}
+
+#remind {
+	display: flex;
+}
+
+#remindopt {
+	margin-left: 55px;
+}
+
+#schedule {
+	display: flex;
+}
+
+#scheduleopt {
+	margin-left: 12px;
 }
 
 input[type=text], select, option {

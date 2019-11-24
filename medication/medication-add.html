@@ -1,0 +1,113 @@
+<html>
+<header>
+   <title>Medication add</title>
+   <link rel="stylesheet" type="text/css" href="../today/today.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</header>
+<body>
+    <div id="screen">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modal_image">
+          <div id="caption"></div>
+        </div>
+
+        <div class="head-bar">
+            <a  href="medication.html">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </a>
+            <h1>Add a medication</h1>
+        </div>
+
+        <div class="add-body">
+            <div class="add-body-info2">
+                <h4>Reminder</h4>
+                    <p>Interval</p>
+                    <select id="Reminder" name="Reminder">
+                        <option value="blank">Once a day</option>
+                        <option value="doctor">Twice a day</option>
+                        <option value="family">Three times a day</option>
+                    </select>
+                    <div id="remind">
+                    <div>
+                    <p>Time</p>
+                    <input type="time" id="appt" name="appt">
+                    </div>
+                    <div id="remindopt">
+                    <p>Dose</p>
+                    <input>
+                    </div>
+                    </div>
+                <hr/>
+                <h4>Schedule</h4>
+                    <div id="schedule">
+                    <div>
+                    <p>Start</p>
+                    <input type="date" id="start" name="start">
+                    </div>
+                    <div id="scheduleopt">
+                    <p>End</p>
+                    <input type="date" id="end" name="end">
+                    </div>
+                    </div>
+                    <input type="checkbox" name="vehicle1" value="Bike"> Mon.
+                    <input type="checkbox" name="vehicle1" value="Bike"> Tues.
+                    <input type="checkbox" name="vehicle1" value="Bike"> Wed.<br>
+                    <input type="checkbox" name="vehicle1" value="Bike"> Thurs.
+                    <input type="checkbox" name="vehicle1" value="Bike"> Fri.
+                    <input type="checkbox" name="vehicle1" value="Bike"> Sat.
+                    <input type="checkbox" name="vehicle1" value="Bike"> Sun.
+                <hr/>
+                <h4>Image</h4>
+                    <input type="file" name="myFile">
+                <hr/>
+                <h4>Instruction</h4>
+                    <input type="text" name="userId" placeholder="Add a Instruction..."><br>
+                    <button>Hold to Record</button>
+            </div>
+
+            <div class="item-buttons">
+                <!-- <a href="today.html" class="item-button-done">Done</a>
+                <a href="#" class="item-button-dismiss">Dismiss</a> -->
+                <a href="medication.html"><button class="item-button-done">Add</button></a>
+                <a href="medication.html"><button id="dismissButton" class="item-button-dismiss">Cancel</button></a>
+            </div>
+        </div>
+
+
+
+        <div class="foot-bar">
+            <div class="tab-icon">
+                <!-- <a  href="songs.html"> -->
+                <a href="../today/today.html">
+                  <i  class="material-icons md-44">schedule</i>
+                </a>
+                <a href="../medication/medication.html">
+                  <i  class="material-icons md-44">event_note</i>
+                </a>
+                <a href="../team/team.html" >
+                  <i  class="material-icons md-44" style="color:MediumSeaGreen">people</i>
+                </a>
+                <a href="../setting/setting.html">
+                  <i  class="material-icons md-44" >settings_applications</i>
+                </a>
+                <!-- </a> -->
+            </div>
+
+            <div class="tab-text">
+                <a href="../today/today.html"><p >Today</p></a>
+                <a href="../medication/medication.html"><p>Med</p></a>
+                <a href="../team/team.html"><p style="color:MediumSeaGreen">Team</p></a>
+                <a href="../setting/setting.html"><p >Setting</p></a>
+            </div>
+        </div>
+    </div>
+<!-- <p id="demo">aaaa</p> -->
+<script src="team.js"></script>
+</body>
+</html>
+<!--
+* bg iphone img is 363x762px
+* iphone 'screen' is apprx 300x530 -->
