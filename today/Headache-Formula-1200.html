@@ -1,19 +1,20 @@
-myModal<html>
+<html>
 <header>
-   <title>Today Item Info Headache Tablets</title>
+   <title>Today Item Info Headache</title>
    <link rel="stylesheet" type="text/css" href="today.css"/>
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 </header>
 <body>
     <div id="screen">
-         <!-- The Modal -->
+          <!-- The Modal -->
         <div id="myModal" class="modal">
           <span class="close">&times;</span>
           <img class="modal-content" id="modal_image">
           <div id="caption"></div>
         </div>
-        <div id="confirmDismissModal" class="modal">
+
+         <div id="confirmDismissModal" class="modal">
           <div class="modal-content-text">
             <div class="modal-text">Are you sure about dismissing?</div>
             <button id="confirmDismissButton" class="modal-button-yes">Yes</button>
@@ -21,7 +22,8 @@ myModal<html>
           </div>
           <div id="caption"></div>
         </div>
-         <div id="audioAnimationModal" class="modal">
+
+        <div id="audioAnimationModal" class="modal">
           <div class="audio-div">
               <span class="audio-span"></span>
               <span class="audio-span"></span>
@@ -33,7 +35,6 @@ myModal<html>
         </div>
 
         <div class="head-bar">
-
             <a  href="today.html">
                 <i class="material-icons">keyboard_arrow_left</i>
             </a>
@@ -43,6 +44,7 @@ myModal<html>
         <div class="today-body">
             <div class="item-info">
                 <img id="thumbnail" src="../images/headache.jpg" alt="headache">
+
 
                 <div id="infoName" class="item-info-name">Headache Formula</div>
                 <div class="item-info-dose">1.0 dose</div>
@@ -65,7 +67,7 @@ myModal<html>
             <div class="item-buttons">
                 <!-- <a href="today.html" class="item-button-done">Done</a>
                 <a href="#" class="item-button-dismiss">Dismiss</a> -->
-                <a href="today.html"><button class="item-button-done"  onclick='updateMedList(this)'>Done</button></a>
+                <a href="today.html"><button class="item-button-done" onclick='updateMedList(this)'>Done</button></a>
                 <button id="dismissButton" class="item-button-dismiss">Dismiss</button>
             </div>
         </div>
@@ -75,25 +77,32 @@ myModal<html>
         <div class="foot-bar">
             <div class="tab-icon">
                 <!-- <a  href="songs.html"> -->
-                <a href="today.html">
+                <a href="../today/today.html">
                   <i  class="material-icons md-44" style="color:MediumSeaGreen">schedule</i>
                 </a>
-                  <i class="material-icons md-44">event_note</i>
-                  <i class="material-icons md-44">people</i>
-                  <i class="material-icons md-44">settings_applications</i>
+                <a href="../medication/medication.html">
+                  <i  class="material-icons md-44" >event_note</i>
+                </a>
+                <a href="../team/team.html">
+                  <i  class="material-icons md-44">people</i>
+                </a>
+                <a href="../setting/setting.html">
+                  <i  class="material-icons md-44" >settings_applications</i>
+                </a>
                 <!-- </a> -->
             </div>
 
             <div class="tab-text">
-                <a href="today.html"><p style="color:MediumSeaGreen">Today</p></a>
-                <p>Med</p>
-                <p>Team</p>
-                <p>Setting</p>
+                <a href="../today/today.html"><p style="color:MediumSeaGreen">Today</p></a>
+                <a href="../medication/medication.html"><p >Med</p></a>
+                <a href="../team/team.html"><p>Team</p></a>
+                <a href="../setting/setting.html"><p>Setting</p></a>
             </div>
         </div>
     </div>
 <!-- <p id="demo">aaaa</p> -->
 <script src="today.js"></script>
+<!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
 </body>
 </html>
 <!--
