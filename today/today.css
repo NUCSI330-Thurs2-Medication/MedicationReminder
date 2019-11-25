@@ -433,6 +433,27 @@ a {
   box-shadow: 2px 2px 5px #888888;
 }
 
+.modal-button-ok{
+  display: block;
+  height: 35px;
+  width: 95px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-left: 50px; */
+  /* margin-right: auto; */
+  border: none;
+  background-color: MediumSeaGreen;
+  color: white;
+  /* padding: 14px 28px; */
+  font-size: 22px;
+  /* font-weight: bold; */
+  /* cursor: pointer; */
+  text-align: center;
+  border-radius: 6px;
+  padding-top: 2px;
+  box-shadow: 2px 2px 5px #888888;
+}
+
 /* Caption of Modal Image */
 #caption {
   margin: auto;
@@ -732,11 +753,11 @@ animation-delay: 0.8s;
 	background-color: white;
 }
 
-#remind {
-	display: flex;
+.remind {
+	display: none;
 }
 
-#remindopt {
+.remindopt {
 	margin-left: 55px;
 }
 
