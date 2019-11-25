@@ -753,6 +753,50 @@ animation-delay: 0.8s;
 	background-color: white;
 }
 
+#addname {
+	display: flex;
+}
+
+#addname input{
+	margin-top: 25px;
+	margin-left: 10px;
+	width: 75%;
+}
+
+#time1 {
+	width: 110%;
+	font-size: large;
+}
+
+#dose1 {
+	margin-left: -15px;
+	width: 115%;
+}
+
+#time2 {
+	width: 110%;
+	font-size: large;
+}
+
+#dose2 {
+	margin-left: -15px;
+	width: 115%;
+}
+
+#time3 {
+	width: 110%;
+	font-size: large;
+}
+
+#dose3 {
+	margin-left: -15px;
+	width: 115%;
+}
+
+#end {
+	margin-left: 13px;
+}
+
 .remind {
 	display: none;
 }
