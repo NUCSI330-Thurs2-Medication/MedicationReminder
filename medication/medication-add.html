@@ -13,6 +13,13 @@
           <img class="modal-content" id="modal_image">
           <div id="caption"></div>
         </div>
+        <div id="missingRequiredFieldsModal" class="modal">
+          <div class="modal-content-text">
+            <div class="modal-text">Please complete all the required fields!</div>
+            <button id="OKButton" class="modal-button-ok">OK</button>
+          </div>
+          <div id="caption"></div>
+        </div>
 
         <div class="head-bar">
             <a  href="medication.html">
@@ -25,21 +32,45 @@
             <div class="add-body-info2">
                 <h4>Reminder</h4>
                     <p>Interval</p>
-                    <select id="Reminder" name="Reminder">
-                        <option value="blank">Once a day</option>
-                        <option value="doctor">Twice a day</option>
-                        <option value="family">Three times a day</option>
+                    <select id="ReminderInterval" name="Reminder" onchange="intervalOnChange()">
+                        <option value="once" >Once a day</option>
+                        <option value="twice" >Twice a day</option>
+                        <option value="threeTimes" >Three times a day</option>
                     </select>
-                    <div id="remind">
+                    <div id="remind1" class="remind">
                     <div>
                     <p>Time</p>
-                    <input type="time" id="time" name="time">
+                    <input type="time" id="time1" name="time">
                     </div>
-                    <div id="remindopt">
+                    <div class="remindopt">
                     <p>Dose</p>
-                    <input id="dose">
+                    <input id="dose1">
                     </div>
                     </div>
+
+                    <div id="remind2" class="remind">
+                    <div>
+                    <p>Time 2</p>
+                    <input type="time" id="time2" name="time">
+                    </div>
+                    <div class="remindopt">
+                    <p>Dose</p>
+                    <input id="dose2">
+                    </div>
+                    </div>
+
+                    <div id="remind3" class="remind">
+                    <div>
+                    <p>Time 3</p>
+                    <input type="time" id="time3" name="time">
+                    </div>
+                    <div class="remindopt">
+                    <p>Dose</p>
+                    <input id="dose3">
+                    </div>
+                    </div>
+
+                    
                 <hr/>
                 <h4>Schedule</h4>
                     <div id="schedule">
@@ -71,7 +102,7 @@
             <div class="item-buttons">
                 <!-- <a href="today.html" class="item-button-done">Done</a>
                 <a href="#" class="item-button-dismiss">Dismiss</a> -->
-                <a href="medication.html"><button class="item-button-done" id="add">Add</button></a>
+                <button class="item-button-done" id="add">Add</button>
                 <a href="medication.html"><button id="cancel" class="item-button-dismiss">Cancel</button></a>
             </div>
         </div>

@@ -14,7 +14,7 @@
             <h1>Medication</h1>
         </div>
 
-        <div class="today-body">
+        <div class="today-body" id="medication-body">
             <a href="Headache-Formula.html">
                 <div class="team-item">
                       <div><img id="thumbnail" src="../images/headache.jpg" alt="headache"></div>
@@ -27,12 +27,15 @@
                       <h3><b><u>Vitamin A</u></b></h3>
                 </div>
             </a>
+
             <a href="Calan-Tablets.html">
-                <div class="team-item">
+                <div class="team-item" id="newly-added">
                       <div><img id="thumbnail" src="../images/calan.png" alt="calan tablets"></div>
                       <h3><b><u>Calan Tablets</u></b></h3>
                 </div>
             </a>
+
+           
         </div>
 
         <div class="foot-bar">
@@ -42,7 +45,7 @@
                   <i  class="material-icons md-44">schedule</i>
                 </a>
                 <a href="../medication/medication.html">
-                  <i  class="material-icons md-44" style="color:MediumSeaGreen">event_note</i>
+                  <i  class="material-icons md-44" style="color:MediumSeaGreen" onclick="clearStorage()">event_note</i>
                 </a>
                 <a href="../team/team.html">
                   <i  class="material-icons md-44">people</i>
