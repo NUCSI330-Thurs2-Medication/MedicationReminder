@@ -797,6 +797,10 @@ animation-delay: 0.8s;
 	margin-left: 13px;
 }
 
+.team-item h3 {
+	font-size: 21px;
+}
+
 .remind {
 	display: none;
 }
