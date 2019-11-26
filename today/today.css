@@ -569,6 +569,25 @@ animation-delay: 0.8s;
 		/* font-weight: bold; */
 }
 
+.friend-request-message {
+	border: 0.5px solid #f57f76f;
+
+	height: 23px;
+	width: 83%;
+	margin-left: auto;
+	margin-right: auto;
+	/* color: #838786; */
+	color: white;
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-left: 10px;
+	/* background-color: #f7faf9; */
+	background-color: MediumSeaGreen;
+	border-radius: 6px;
+	box-shadow: 2px 2px 5px #888888;
+		/* font-weight: bold; */
+}
+
 .team-item {
 	border: 0.5px solid #d2d2d2;
 
