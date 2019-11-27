@@ -6,7 +6,7 @@ var added="0";
 var defImgSrc = "../images/calan.png";
 var daysIDs = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
 
-
+// Project 9 Simple realization (Did not implement real backend, this version works only with the scenario).
 class Medication{
     constructor(dailySchedules, start,end,days,imgsrc,instruction){
         this.dailySchedules = dailySchedules;
