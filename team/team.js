@@ -7,6 +7,7 @@ function init(){
   if (friendAmy == "") friendAmy = '0';
   if (checkStatus == "") checkStatus = '0';
   if (checkRequest == "") checkRequest = '0';
+  if(justSentRequest =="")justSentRequest = '0';
   
 }
 
@@ -34,6 +35,10 @@ if (img) {
 var checked='../images/check.png';
 var unchecked='../images/uncheck.png';
 var checkStatus = '0'; // share medication information with Amy
+
+var zhangStatus = '1';
+var eliStatus = '1';
+var justSentRequest = '0';
 // change check box
 function changeCheckBox(x) {
     if (checkStatus == '1') {
@@ -59,6 +64,11 @@ function checkAdd(x){
   }
 }
 
+function friendRequestSent(){
+  justSentRequest = '1';
+  saveStatus();
+}
+
 
 var friendAmy = '0';
 var checkRequest = '0';
@@ -70,12 +80,21 @@ function saveData() {
 
 function saveStatus(){
   localStorage.setItem('checkStatus', checkStatus);
+   localStorage.setItem('eliStatus',eliStatus);
+  localStorage.setItem('zhangStatus',zhangStatus);
+  localStorage.setItem('justSentRequest',justSentRequest);
 }
+
 function retrieveData() {
   // Retrieve the object from storage
   friendAmy = localStorage.getItem('friendAmy')?localStorage.getItem('friendAmy'):'0';
   checkStatus = localStorage.getItem('checkStatus')?localStorage.getItem('checkStatus'):'0';
   checkRequest = localStorage.getItem('checkRequest')?localStorage.getItem('checkRequest'):'0';
+
+  //other status 
+  zhangStatus = localStorage.getItem('zhangStatus')?localStorage.getItem('zhangStatus'):'1';
+  eliStatus = localStorage.getItem('eliStatus')?localStorage.getItem('eliStatus'):'1';
+  justSentRequest = localStorage.getItem('justSentRequest')?localStorage.getItem('justSentRequest'):'0';
   // document.getElementById("demo").innerHTML = checkStatus;
 }
 
@@ -117,16 +136,70 @@ if (document.getElementById("Amy") && document.getElementById("teamRequest")) {
   }
 }
 
+//Friend request feedback
 
-if(document.getElementById("AmyShare") && document.getElementById("AmyText")){
-  if(checkStatus == '1'){
-    document.getElementById("AmyShare").src = "../images/yes.svg";
-    document.getElementById("AmyText").innerHTML = "Sharing my medication infomation.";
+if(document.getElementById("friendRequest")){
+  if(justSentRequest=='1'){
+  document.getElementById("friendRequest").style.display = "block";
+
+  var i = 3;
+  setTimeout(function(){document.getElementById("friendRequest").style.display = "none";},3000);
+  
+  justSentRequest = '0';
+  saveStatus();
+  }else{
+    document.getElementById("friendRequest").style.display = "none";
+  }
+}
+
+
+
+
+if(document.getElementById("share-info-checkbox") && document.getElementById("share-info-text")){
+  var iconEle = document.getElementById("share-info-checkbox");
+  var username = iconEle.name;
+
+  if(username=='eli'){
+    userStatus = eliStatus; 
+  }else if(username=='zhang'){
+    userStatus = zhangStatus;
+  }else{
+    userStatus = checkStatus;
+  }
+
+  if(userStatus == '1'){
+    document.getElementById("share-info-checkbox").src = "../images/yes.svg";
+    document.getElementById("share-info-text").innerHTML = "Sharing my medication infomation.";
   }
   else{
-    document.getElementById("AmyShare").src = "../images/no.svg";
-    document.getElementById("AmyText").innerHTML = "Not sharing my medication infomation.";
+    document.getElementById("share-info-checkbox").src = "../images/no.svg";
+    document.getElementById("share-info-text").innerHTML = "Not sharing my medication infomation.";
   }
+}
+
+function switchInfoShareIcon(e, username){
+  var iconEle = document.getElementById("share-info-checkbox");
+  var username = iconEle.name;
+
+  if(username=='eli'){
+    userStatus = eliStatus; 
+    eliStatus = (eliStatus=="0"?"1":"0");
+  }else if(username=='zhang'){
+    userStatus = zhangStatus;
+    zhangStatus = (zhangStatus=="0"?"1":"0");
+  }else{
+    userStatus = checkStatus;
+    checkStatus = (checkStatus=="0"?"1":"0");
+  }
+  if(userStatus == '0'){
+    document.getElementById("share-info-checkbox").src = "../images/yes.svg";
+    document.getElementById("share-info-text").innerHTML = "Sharing my medication infomation.";
+  }
+  else{
+    document.getElementById("share-info-checkbox").src = "../images/no.svg";
+    document.getElementById("share-info-text").innerHTML = "Not sharing my medication infomation.";
+  }
+  saveStatus();
 }
 
 
