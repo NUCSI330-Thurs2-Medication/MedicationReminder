@@ -8,6 +8,20 @@ function init(){
   if (checkStatus == "") checkStatus = '0';
   if (checkRequest == "") checkRequest = '0';
   if(justSentRequest =="")justSentRequest = '0';
+
+  if(zhangDel=="")zhangDel='0';
+  if(eliDel=="")eliDel = '0';
+  if(amyDel=="")amyDel = '0';
+
+  if(zhangDel=="1" && document.getElementById("zhang")){
+    document.getElementById("zhang").style.display = "none";
+  }
+  if(eliDel=="1" && document.getElementById("eli")){
+    document.getElementById("eli").style.display = "none";
+  }
+  if(amyDel=="1" && document.getElementById("Amy")){
+    document.getElementById("Amy").style.display = "none";
+  }
   
 }
 
@@ -39,6 +53,10 @@ var checkStatus = '0'; // share medication information with Amy
 var zhangStatus = '1';
 var eliStatus = '1';
 var justSentRequest = '0';
+
+var zhangDel = '0';
+var eliDel ='0';
+var amyDel ='0';
 // change check box
 function changeCheckBox(x) {
     if (checkStatus == '1') {
@@ -83,6 +101,11 @@ function saveStatus(){
    localStorage.setItem('eliStatus',eliStatus);
   localStorage.setItem('zhangStatus',zhangStatus);
   localStorage.setItem('justSentRequest',justSentRequest);
+
+  //for delete friends
+  localStorage.setItem('zhangDel',zhangDel);
+  localStorage.setItem('amyDel',amyDel);
+  localStorage.setItem('eliDel',eliDel);
 }
 
 function retrieveData() {
@@ -96,6 +119,10 @@ function retrieveData() {
   eliStatus = localStorage.getItem('eliStatus')?localStorage.getItem('eliStatus'):'1';
   justSentRequest = localStorage.getItem('justSentRequest')?localStorage.getItem('justSentRequest'):'0';
   // document.getElementById("demo").innerHTML = checkStatus;
+  //for delete friends
+  zhangDel = localStorage.getItem('zhangDel')?localStorage.getItem('zhangDel'):'0';
+  amyDel = localStorage.getItem('amyDel')?localStorage.getItem('amyDel'):'0';
+  eliDel = localStorage.getItem('eliDel')?localStorage.getItem('eliDel'):'0';
 }
 
 function clearShortage(){
@@ -122,15 +149,14 @@ init();
 // document.getElementById("demo").innerHTML = checkStatus;
 
 if (document.getElementById("Amy") && document.getElementById("teamRequest")) {
-  if (checkRequest == '1' && friendAmy == '1'){
+  if (checkRequest == '1' && friendAmy == '1'&&amyDel=="0"){
       document.getElementById("Amy").style.display = "block";
       document.getElementById("teamRequest").style.display = "none";
   }
-  else if(checkRequest =='1' && friendAmy == '0'){
+  else if((checkRequest =='1' && friendAmy == '0')||amyDel=="1"){
     document.getElementById("Amy").style.display = "none";
     document.getElementById("teamRequest").style.display = "none"; 
-  }
-  else{
+  }else{
     document.getElementById("teamRequest").style.display = "block";   
     document.getElementById("Amy").style.display = "none";
   }
@@ -200,6 +226,41 @@ function switchInfoShareIcon(e, username){
     document.getElementById("share-info-text").innerHTML = "Not sharing my medication infomation.";
   }
   saveStatus();
+}
+
+function editFriend(fName){
+
+}
+
+confirmDelete = document.getElementById("confirmDelete");
+cancelDelete = document.getElementById("cancelDelete");
+if(confirmDelete&&cancelDelete){
+  confirmDelete.onclick = function(){
+      if(deleteName=='zhang'){
+      zhangDel = '1';
+      saveStatus();
+    }else if (deleteName=='eli'){
+      eliDel = '1';
+      saveStatus();
+    }else if (deleteName=='amy'){
+      amyDel = '1';
+      saveStatus();
+    }else{
+      console.log('User not found');
+    }
+    document.getElementById("confirmDeleteModal").style.display = "none";
+    window.location.href = "team.html";
+  }
+  cancelDelete.onclick = function(){
+    document.getElementById("confirmDeleteModal").style.display = "none";
+  }
+}
+var deleteName;
+
+function deleteFriend(fName){
+  deleteName = fName;
+  document.getElementById("confirmDeleteModal").style.display = "block";
+
 }
 
 

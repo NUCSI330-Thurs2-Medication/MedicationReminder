@@ -29,6 +29,10 @@ function saveData() {
     // Put the object into storage
     localStorage.setItem('medAddList', JSON.stringify(medAddList));
     localStorage.setItem('added',added);
+
+    localStorage.setItem('headache',headache);
+    localStorage.setItem('vitamin',vitamin);
+    localStorage.setItem('calan',calan);
 }
 
 function retrieveData() {
@@ -37,6 +41,10 @@ function retrieveData() {
     added = localStorage.getItem('added')?localStorage.getItem('added'):"0";
     if(medAddListStr)
         medAddList = JSON.parse(medAddListStr);
+
+    headache = localStorage.getItem('headache')?localStorage.getItem('headache'):"1";
+    vitamin = localStorage.getItem('vitamin')?localStorage.getItem('vitamin'):"1";
+    calan = localStorage.getItem('calan')?localStorage.getItem('calan'):"0";
 }
 function clearStorage(){
   localStorage.clear();
@@ -57,6 +65,18 @@ function init() {
         }
     }
 
+    // see if deleted
+    if(headache=='0'&&document.getElementById("headache")){
+        document.getElementById("headache").style.display = "none";
+    }
+
+    if(vitamin=="0"&&document.getElementById("vitamin")){
+        document.getElementById("vitamin").style.display = "none";
+    }
+    if(calan=="0"&&document.getElementById("newly-added")){
+        document.getElementById("newly-added").style.display = "none";
+    }
+   
     // if(medListView){
     //   console.log(medAddList);
     // for(var i = 0;i < medAddList.length;i++){
@@ -190,6 +210,7 @@ function addAMedication(){
         var newMed = new Medication(dss,startDate,endDate,days,defImgSrc,instructions);
         medAddList.push(newMed);
         added="1";
+        calan="1";
         saveData();  
         return true;
     }else{
@@ -268,6 +289,36 @@ if(playAudioButton&&audioAnimationModal){
         audioAnimationModal.style.display = "none";
     }
 }
-
+var calan;
+var headache;
+var vitamin;
+var deleteName;
+confirmDelete = document.getElementById("confirmDelete");
+cancelDelete = document.getElementById("cancelDelete");
+if(confirmDelete&&cancelDelete){
+  confirmDelete.onclick = function(){
+      if(deleteName=='headache'){
+      headache = '0';
+      saveData();
+    }else if (deleteName=='calan'){
+      calan = '0';
+      saveData();
+    }else if (deleteName=='vitamin'){
+      vitamin = '0';
+      saveData();
+    }else{
+      console.log('Med not found');
+    }
+    document.getElementById("confirmDeleteModal").style.display = "none";
+    window.location.href = "medication.html";
+  }
+  cancelDelete.onclick = function(){
+    document.getElementById("confirmDeleteModal").style.display = "none";
+  }
+}
+function deleteMed(mName){
+  deleteName = mName;
+  document.getElementById("confirmDeleteModal").style.display = "block";
+}
 
 init();
