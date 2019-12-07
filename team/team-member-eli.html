@@ -13,6 +13,14 @@
           <img class="modal-content" id="modal_image">
           <div id="caption"></div>
         </div>
+         <div id="confirmDeleteModal" class="modal">
+            <div class="modal-content-text">
+              <div class="modal-text">Are you sure about deleting this friend?</div>
+              <button id="confirmDelete" class="modal-button-yes">Yes</button>
+              <button id="cancelDelete"class="modal-button-cancel">Cancel</button>
+            </div>
+            <div id="caption"></div>
+        </div>
 
 
         <div class="head-bar">
@@ -38,7 +46,7 @@
 
             <div class="item-buttons">
                 <button class="item-button-done" id="edit">Edit</button>
-                <button class="item-button-dismiss" id="delete">Delete</button>
+                <button class="item-button-dismiss" id="delete" onclick="deleteFriend('eli')">Delete</button>
             </div>
         </div>
 
